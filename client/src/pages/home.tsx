@@ -207,9 +207,16 @@ export default function Home() {
                   <div className="terminal-lime mb-2">PRIMARY_CONTACT:</div>
                   <a 
                     href="mailto:justin@upendcapital.com"
-                    className="terminal-green terminal-link px-2 py-1 inline-block"
+                    className="terminal-green terminal-link px-2 py-1 inline-block mb-1"
                   >
                     justin@upendcapital.com
+                  </a>
+                  <br />
+                  <a 
+                    href="mailto:alex@upendcapital.com"
+                    className="terminal-green terminal-link px-2 py-1 inline-block"
+                  >
+                    alex@upendcapital.com
                   </a>
                 </div>
                 
