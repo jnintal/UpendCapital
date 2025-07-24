@@ -108,13 +108,31 @@ export default function Home() {
               <div>
                 <div className="mb-4">
                   <div className="terminal-lime mb-2">FUND PRINCIPALS:</div>
-                  <div className="opacity-80 mb-2">• Justin - General Partner</div>
-                  <div className="opacity-80">• Alex - Investment Partner</div>
+                  <div className="opacity-80 mb-2">• 
+                    <a 
+                      href="https://www.linkedin.com/in/jintal/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="terminal-green terminal-link px-1"
+                    >
+                      Justin
+                    </a>
+                  </div>
+                  <div className="opacity-80">• 
+                    <a 
+                      href="https://www.linkedin.com/in/alex-z-chen/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="terminal-green terminal-link px-1"
+                    >
+                      Alex
+                    </a>
+                  </div>
                 </div>
                 <div className="mb-4">
                   <div className="terminal-lime mb-2">TEAM BACKGROUND:</div>
                   <div className="opacity-80 text-xs">
-                    Experienced investors focused on identifying and supporting exceptional founders building technology solutions in large, fragmented markets.
+                    Justin is the founder and ex-CEO of Forage (YCS21). Alex was an investor at Citi Ventures and Kapor Capital. We invest in markets and people.
                   </div>
                 </div>
               </div>
