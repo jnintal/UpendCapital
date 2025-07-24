@@ -56,6 +56,11 @@ export default function Home() {
       url: "https://www.thellmdatacompany.com/"
     },
     {
+      name: "TINY (YCF24)",
+      description: "MODERN AGENTIC ERP",
+      url: "https://andtiny.com/"
+    },
+    {
       name: "ZETA",
       description: "FINANCES FOR COUPLES AND FAMILIES",
       url: "https://www.askzeta.com/"
@@ -164,7 +169,7 @@ export default function Home() {
             
             <div className="mt-6 text-xs opacity-60">
               <div className="mb-2">PORTFOLIO_STATUS: ACTIVE_MONITORING</div>
-              <div>COMPANIES_TRACKED: 12</div>
+              <div>COMPANIES_TRACKED: 13</div>
             </div>
           </section>
 
