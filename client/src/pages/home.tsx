@@ -233,10 +233,10 @@ export default function Home() {
               <div className="flex items-center gap-4 mb-4 md:mb-0">
                 <div>SYSTEM: <span className="terminal-lime">OPERATIONAL</span></div>
                 <div>NETWORK: <span className="terminal-lime">ONLINE</span></div>
-                <div>LAST_UPDATE: <span className="opacity-60">2024.12.19</span></div>
+                <div>LAST_UPDATE: <span className="opacity-60">2025.07.24</span></div>
               </div>
               <div className="opacity-60">
-                UPEND_CAPITAL_SYSTEMS © 2024 • TERMINAL_v1.0
+                UPEND_CAPITAL_LLC © 2025 • TERMINAL_v1.0
               </div>
             </div>
           </section>
