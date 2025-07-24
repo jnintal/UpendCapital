@@ -145,7 +145,7 @@ export default function Home() {
           </section>
 
           {/* Portfolio Companies Section */}
-          <section className="terminal-border terminal-container p-6 slide-up terminal-scan">
+          <section className="terminal-border terminal-container p-6 slide-up">
             <h2 className="text-xl mb-4 terminal-glow">2.0 PORTFOLIO_COMPANIES</h2>
             <div className="text-sm mb-4 opacity-60">Select investment partners and technology ventures</div>
             
