@@ -90,7 +90,7 @@ export default function Home() {
         <div className="space-y-8">
           {/* Fund Overview Section */}
           <section className="terminal-border terminal-container p-6">
-            <h2 className="text-xl mb-4 terminal-glow">1.0 FUND OVERVIEW</h2>
+            <h2 className="text-xl mb-4 terminal-glow">1.0 FUND_OVERVIEW</h2>
             <div className="grid md:grid-cols-2 gap-6 text-sm">
               <div>
                 <div className="mb-4">
@@ -146,7 +146,7 @@ export default function Home() {
 
           {/* Portfolio Companies Section */}
           <section className="terminal-border terminal-container p-6">
-            <h2 className="text-xl mb-4 terminal-glow">2.0 PORTFOLIO COMPANIES</h2>
+            <h2 className="text-xl mb-4 terminal-glow">2.0 PORTFOLIO_COMPANIES</h2>
             <div className="text-sm mb-4 opacity-60">Select investment partners and technology ventures</div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -175,7 +175,7 @@ export default function Home() {
 
           {/* Investment Focus Section */}
           <section className="terminal-border terminal-container p-6">
-            <h2 className="text-xl mb-4 terminal-glow">3.0 INVESTMENT PARAMETERS</h2>
+            <h2 className="text-xl mb-4 terminal-glow">3.0 INVESTMENT_PARAMETERS</h2>
             
             <div className="grid md:grid-cols-2 gap-8">
               <div>
