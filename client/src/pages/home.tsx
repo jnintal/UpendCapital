@@ -71,15 +71,15 @@ export default function Home() {
     <div className="terminal-bg terminal-green font-terminal min-h-screen p-4">
       <div className="max-w-6xl mx-auto">
         {/* Header Terminal */}
-        <div className="terminal-border terminal-container p-6 mb-8">
+        <div className="terminal-border terminal-container p-6 mb-8 fade-in">
           <div className="text-center">
-            <div className="text-sm mb-4 opacity-60">Investment Terminal v1.0</div>
+            <div className="text-sm mb-4 opacity-60 typing-delay-1 typing-animation">Investment Terminal v1.0</div>
             
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 terminal-glow tracking-wider">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 terminal-glow tracking-wider typing-delay-2 typing-animation-slow">
               UPEND CAPITAL
             </h1>
             
-            <div className="flex justify-center items-center gap-2 text-sm">
+            <div className="flex justify-center items-center gap-2 text-sm typing-delay-3 fade-in">
               <span>STATUS:</span>
               <span className="terminal-lime">ONLINE</span>
               <span className="w-2 h-2 bg-current rounded-full terminal-cursor"></span>
@@ -89,7 +89,7 @@ export default function Home() {
 
         <div className="space-y-8">
           {/* Fund Overview Section */}
-          <section className="terminal-border terminal-container p-6">
+          <section className="terminal-border terminal-container p-6 slide-up">
             <h2 className="text-xl mb-4 terminal-glow">1.0 FUND_OVERVIEW</h2>
             <div className="grid md:grid-cols-2 gap-6 text-sm">
               <div>
@@ -145,24 +145,24 @@ export default function Home() {
           </section>
 
           {/* Portfolio Companies Section */}
-          <section className="terminal-border terminal-container p-6">
+          <section className="terminal-border terminal-container p-6 slide-up terminal-scan">
             <h2 className="text-xl mb-4 terminal-glow">2.0 PORTFOLIO_COMPANIES</h2>
             <div className="text-sm mb-4 opacity-60">Select investment partners and technology ventures</div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {portfolioCompanies.map((company, index) => (
-                <div key={index} className="border border-current border-opacity-30 p-4 hover:border-opacity-100 transition-all">
+                <div key={index} className="portfolio-card border border-current border-opacity-30 p-4">
                   <div className="mb-2">
                     <a 
                       href={company.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="terminal-lime terminal-link px-2 py-1 inline-block"
+                      className="portfolio-name terminal-lime terminal-link px-2 py-1 inline-block"
                     >
                       {company.name} →
                     </a>
                   </div>
-                  <div className="text-xs opacity-60">{company.description}</div>
+                  <div className="portfolio-description text-xs">{company.description}</div>
                 </div>
               ))}
             </div>
@@ -174,7 +174,7 @@ export default function Home() {
           </section>
 
           {/* Investment Focus Section */}
-          <section className="terminal-border terminal-container p-6">
+          <section className="terminal-border terminal-container p-6 slide-up">
             <h2 className="text-xl mb-4 terminal-glow">3.0 INVESTMENT_PARAMETERS</h2>
             
             <div className="grid md:grid-cols-2 gap-8">
@@ -203,7 +203,7 @@ export default function Home() {
           </section>
 
           {/* Contact Section */}
-          <section className="terminal-border terminal-container p-6">
+          <section className="terminal-border terminal-container p-6 slide-up">
             <h2 className="text-xl mb-4 terminal-glow">4.0 CONTACT_PROTOCOL</h2>
             
             <div className="grid md:grid-cols-2 gap-8">
@@ -240,7 +240,7 @@ export default function Home() {
           </section>
 
           {/* System Status Footer */}
-          <section className="terminal-border terminal-container p-4">
+          <section className="terminal-border terminal-container p-4 fade-in">
             <div className="flex flex-col md:flex-row justify-between items-center text-sm">
               <div className="flex items-center gap-4 mb-4 md:mb-0">
                 <div>SYSTEM: <span className="terminal-lime">OPERATIONAL</span></div>
