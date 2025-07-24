@@ -1,34 +1,64 @@
 export default function Home() {
   const portfolioCompanies = [
     {
-      name: "TECHSTARTUP_01",
-      description: "AI-POWERED ANALYTICS",
-      url: "https://example.com"
+      name: "ALICE (PRETAX HERO INC)",
+      description: "COMMUTER BENEFITS COMPLIANCE",
+      url: "https://www.thisisalice.com/"
     },
     {
-      name: "FINTECH_VENTURES",
-      description: "FINANCIAL INFRASTRUCTURE", 
-      url: "https://example.com"
+      name: "ARCHER",
+      description: "ANTI-FRAUD PLATFORM FOR AFRICA",
+      url: "https://www.archerprotect.com/"
     },
     {
-      name: "HEALTHTECH_CO",
-      description: "DIGITAL HEALTH PLATFORM",
-      url: "https://example.com"
+      name: "CHECKER FINANCE",
+      description: "GLOBAL LIQUIDITY NETWORK FOR STABLECOINS",
+      url: "https://www.checker.finance/"
     },
     {
-      name: "CLIMATE_SOLUTIONS", 
-      description: "SUSTAINABILITY TECH",
-      url: "https://example.com"
+      name: "JOYFUL HEALTH",
+      description: "FINANCIAL OPERATIONS FOR HEALTHCARE PROVIDERS",
+      url: "https://www.joyfulhealth.io/"
     },
     {
-      name: "ENTERPRISE_SaaS",
-      description: "B2B SOFTWARE PLATFORM",
-      url: "https://example.com"
+      name: "LITTIO (YCW23)",
+      description: "DIGITAL BANK FOR LATIN AMERICA",
+      url: "https://littio.co/"
     },
     {
-      name: "MOBILITY_TECH",
-      description: "TRANSPORTATION INNOVATION",
-      url: "https://example.com"
+      name: "MERCOA (YCW23)",
+      description: "EMBEDDED ACCOUNTS PAYABLE PLATFORM",
+      url: "https://mercoa.ai/"
+    },
+    {
+      name: "RIVY (YCS21)",
+      description: "FINANCING THE FUTURE OF ENERGY",
+      url: "https://rivy.co/"
+    },
+    {
+      name: "SALMON",
+      description: "AI ENGINE FOR ENTERPRISE GROWTH OPERATIONS",
+      url: "https://salmonrun.ai/"
+    },
+    {
+      name: "SIEVE (YCX25)",
+      description: "DATA CLEANING FOR INVESTMENT FIRMS",
+      url: "https://www.usesieve.com/"
+    },
+    {
+      name: "SPHEROS",
+      description: "SECURE DATA PLATFORM",
+      url: "https://www.spheros.io/"
+    },
+    {
+      name: "THE LLM DATA COMPANY (YCX25)",
+      description: "FRONTIER EVALS FOR MODEL MEASUREMENT",
+      url: "https://www.thellmdatacompany.com/"
+    },
+    {
+      name: "ZETA",
+      description: "FINANCES FOR COUPLES AND FAMILIES",
+      url: "https://www.askzeta.com/"
     }
   ];
 
@@ -116,7 +146,7 @@ export default function Home() {
             
             <div className="mt-6 text-xs opacity-60">
               <div className="mb-2">PORTFOLIO_STATUS: ACTIVE_MONITORING</div>
-              <div>COMPANIES_TRACKED: 25+</div>
+              <div>COMPANIES_TRACKED: 12</div>
             </div>
           </section>
 
