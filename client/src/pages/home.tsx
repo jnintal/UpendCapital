@@ -209,7 +209,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <div className="mb-4">
-                  <div className="terminal-lime mb-2">PRIMARY_CONTACT:</div>
+                  <div className="terminal-lime mb-2">PRIMARY CONTACT:</div>
                   <a 
                     href="mailto:justin@upendcapital.com"
                     className="terminal-green terminal-link px-2 py-1 inline-block mb-1"
@@ -232,7 +232,7 @@ export default function Home() {
                 </div>
                 
                 <div className="mb-4">
-                  <div className="terminal-lime mb-2">RESPONSE_TIME:</div>
+                  <div className="terminal-lime mb-2">RESPONSE TIME:</div>
                   <div className="opacity-80">24-48 hours</div>
                 </div>
               </div>
