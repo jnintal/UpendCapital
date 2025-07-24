@@ -27,7 +27,7 @@ export default function Home() {
     },
     {
       name: "MERCOA (YCW23)",
-      description: "EMBEDDED ACCOUNTS PAYABLE PLATFORM",
+      description: "AI AGENT FOR VIRTUAL CARDS",
       url: "https://mercoa.ai/"
     },
     {
