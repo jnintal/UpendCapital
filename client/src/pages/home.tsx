@@ -38,13 +38,11 @@ export default function Home() {
         {/* Header Terminal */}
         <div className="terminal-border terminal-container p-6 mb-8">
           <div className="text-center">
-            <div className="text-sm mb-2 opacity-80">UPEND CAPITAL SYSTEMS</div>
             <div className="text-sm mb-4 opacity-60">Investment Terminal v1.0</div>
             
             <h1 className="text-4xl md:text-6xl font-bold mb-4 terminal-glow tracking-wider">
               UPEND CAPITAL
             </h1>
-            <div className="text-lg md:text-xl mb-4 opacity-80">TECH STARTUP INVESTMENT FUND</div>
             
             <div className="flex justify-center items-center gap-2 text-sm">
               <span>STATUS:</span>
@@ -72,18 +70,22 @@ export default function Home() {
                   <div className="terminal-lime mb-2">SECTORS:</div>
                   <div className="opacity-80">Agnostic - All Technology Verticals</div>
                 </div>
-              </div>
-              <div>
-                <div className="mb-4">
-                  <div className="terminal-lime mb-2">INVESTMENT CRITERIA:</div>
-                  <div className="opacity-80">• Tier 1 founder profiles</div>
-                  <div className="opacity-80">• Better human initiatives</div>
-                  <div className="opacity-80">• Large fragmented industries</div>
-                  <div className="opacity-80">• Low NPS market opportunities</div>
-                </div>
                 <div className="mb-4">
                   <div className="terminal-lime mb-2">LOCATION:</div>
                   <div className="opacity-80">New York, NY</div>
+                </div>
+              </div>
+              <div>
+                <div className="mb-4">
+                  <div className="terminal-lime mb-2">FUND PRINCIPALS:</div>
+                  <div className="opacity-80 mb-2">• Justin - General Partner</div>
+                  <div className="opacity-80">• Alex - Investment Partner</div>
+                </div>
+                <div className="mb-4">
+                  <div className="terminal-lime mb-2">TEAM BACKGROUND:</div>
+                  <div className="opacity-80 text-xs">
+                    Experienced investors focused on identifying and supporting exceptional founders building technology solutions in large, fragmented markets.
+                  </div>
                 </div>
               </div>
             </div>
@@ -130,17 +132,6 @@ export default function Home() {
                     <div>• Large fragmented industries</div>
                     <div>• Low customer satisfaction scores</div>
                     <div>• High inefficiency markets</div>
-                    <div>• Technology disruption opportunities</div>
-                  </div>
-                </div>
-                
-                <div className="mb-6">
-                  <div className="terminal-lime mb-3">FOUNDER PROFILE</div>
-                  <div className="text-sm space-y-2 opacity-80">
-                    <div>• Tier 1 experience and background</div>
-                    <div>• Mission-driven leadership</div>
-                    <div>• Proven execution capability</div>
-                    <div>• Better human principles</div>
                   </div>
                 </div>
               </div>
@@ -152,17 +143,6 @@ export default function Home() {
                     <div>• High-conviction, concentrated bets</div>
                     <div>• Hands-on support and mentorship</div>
                     <div>• Network access and introductions</div>
-                    <div>• Long-term partnership mindset</div>
-                  </div>
-                </div>
-                
-                <div className="mb-6">
-                  <div className="terminal-lime mb-3">DUE DILIGENCE</div>
-                  <div className="text-sm space-y-2 opacity-80">
-                    <div>• Market size and opportunity</div>
-                    <div>• Competitive landscape analysis</div>
-                    <div>• Technical feasibility review</div>
-                    <div>• Team assessment and references</div>
                   </div>
                 </div>
               </div>
@@ -194,28 +174,6 @@ export default function Home() {
                 <div className="mb-4">
                   <div className="terminal-lime mb-2">RESPONSE_TIME:</div>
                   <div className="opacity-80">24-48 hours</div>
-                </div>
-              </div>
-              
-              <div>
-                <div className="mb-4">
-                  <div className="terminal-lime mb-2">SUBMISSION_GUIDELINES:</div>
-                  <div className="text-sm space-y-1 opacity-80">
-                    <div>• Executive summary (1-2 pages)</div>
-                    <div>• Pitch deck (10-15 slides)</div>
-                    <div>• Financial projections</div>
-                    <div>• Team backgrounds</div>
-                  </div>
-                </div>
-                
-                <div className="mb-4">
-                  <div className="terminal-lime mb-2">MEETING_PROTOCOL:</div>
-                  <div className="text-sm space-y-1 opacity-80">
-                    <div>• Initial screening call</div>
-                    <div>• Formal pitch presentation</div>
-                    <div>• Reference and background checks</div>
-                    <div>• Investment committee review</div>
-                  </div>
                 </div>
               </div>
             </div>
