@@ -73,9 +73,9 @@ export default function Home() {
         {/* Header Terminal */}
         <div className="terminal-border terminal-container p-6 mb-8 fade-in">
           <div className="text-center">
-            <div className="text-sm mb-4 opacity-60 typing-delay-1 typing-animation">Investment Terminal v1.0</div>
+            <div className="text-sm mb-4 opacity-60 typing-delay-1 fade-in">Investment Terminal v1.0</div>
             
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 terminal-glow tracking-wider typing-delay-2 typing-animation-slow">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 terminal-glow tracking-wider typing-delay-2 fade-in">
               UPEND CAPITAL
             </h1>
             
