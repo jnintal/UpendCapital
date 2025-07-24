@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+
+  /* Terminal Colors */
+  --terminal-green: hsl(120, 100%, 50%);
+  --terminal-lime: hsl(90, 61%, 55%);
+  --terminal-bg: hsl(0, 0%, 10%);
+  --terminal-container: hsl(0, 0%, 5%);
+  --terminal-border: hsl(120, 100%, 50%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Terminal Styles */
+@layer components {
+  .terminal-bg {
+    background-color: var(--terminal-bg);
+  }
+  
+  .terminal-container {
+    background-color: var(--terminal-container);
+  }
+  
+  .terminal-green {
+    color: var(--terminal-green);
+  }
+  
+  .terminal-lime {
+    color: var(--terminal-lime);
+  }
+  
+  .terminal-border {
+    border: 2px solid var(--terminal-border);
+    box-shadow: 0 0 10px var(--terminal-border);
+  }
+  
+  .terminal-glow {
+    text-shadow: 0 0 5px var(--terminal-green);
+  }
+  
+  .terminal-glow-intense {
+    text-shadow: 0 0 10px var(--terminal-green), 0 0 20px var(--terminal-green), 0 0 30px var(--terminal-green);
+  }
+  
+  .terminal-link {
+    transition: all 0.2s ease;
+  }
+  
+  .terminal-link:hover {
+    background-color: var(--terminal-green);
+    color: var(--terminal-bg);
+    text-shadow: none;
+  }
+  
+  .terminal-cursor {
+    animation: terminal-blink 1s infinite;
+  }
+  
+  .terminal-status {
+    animation: terminal-glow 2s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes terminal-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes terminal-glow {
+  from { 
+    text-shadow: 0 0 5px var(--terminal-green), 0 0 10px var(--terminal-green); 
+  }
+  to { 
+    text-shadow: 0 0 10px var(--terminal-green), 0 0 20px var(--terminal-green), 0 0 30px var(--terminal-green); 
+  }
+}
+
+/* Terminal font family */
+.font-terminal {
+  font-family: 'Courier New', Monaco, 'Lucida Console', monospace;
+}
