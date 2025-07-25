@@ -1,133 +1,4 @@
-import { useState } from "react";
-import { useMutation } from "@tanstack/react-query";
-import { useToast } from "@/hooks/use-toast";
-import { insertContactSchema, type InsertContact } from "@shared/schema";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
 
-// ContactForm component
-function ContactForm() {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const form = useForm<InsertContact>({
-    resolver: zodResolver(insertContactSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      company: "",
-      message: "",
-    },
-  });
-
-  const contactMutation = useMutation({
-    mutationFn: async (data: InsertContact) => {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-      
-      if (!response.ok) {
-        const error = await response.json();
-        throw new Error(error.message || "Failed to send message");
-      }
-      
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "MESSAGE_TRANSMITTED",
-        description: "Your message has been sent successfully. Response expected within 24-48 hours.",
-      });
-      form.reset();
-      setIsSubmitting(false);
-    },
-    onError: (error: Error) => {
-      toast({
-        title: "TRANSMISSION_FAILED",
-        description: error.message,
-        variant: "destructive",
-      });
-      setIsSubmitting(false);
-    },
-  });
-
-  const onSubmit = (data: InsertContact) => {
-    setIsSubmitting(true);
-    contactMutation.mutate(data);
-  };
-
-  return (
-    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-      <div className="grid md:grid-cols-2 gap-4">
-        <div>
-          <label className="block text-xs terminal-amber-light mb-2">NAME [REQUIRED]</label>
-          <input
-            {...form.register("name")}
-            className="w-full terminal-input px-3 py-2 text-sm"
-            placeholder="Enter full name..."
-          />
-          {form.formState.errors.name && (
-            <div className="text-xs text-red-400 mt-1">ERROR: {form.formState.errors.name.message}</div>
-          )}
-        </div>
-        
-        <div>
-          <label className="block text-xs terminal-amber-light mb-2">EMAIL [REQUIRED]</label>
-          <input
-            {...form.register("email")}
-            type="email"
-            className="w-full terminal-input px-3 py-2 text-sm"
-            placeholder="Enter email address..."
-          />
-          {form.formState.errors.email && (
-            <div className="text-xs text-red-400 mt-1">ERROR: {form.formState.errors.email.message}</div>
-          )}
-        </div>
-      </div>
-
-      <div>
-        <label className="block text-xs terminal-amber-light mb-2">COMPANY [OPTIONAL]</label>
-        <input
-          {...form.register("company")}
-          className="w-full terminal-input px-3 py-2 text-sm"
-          placeholder="Enter company name..."
-        />
-      </div>
-
-      <div>
-        <label className="block text-xs terminal-amber-light mb-2">MESSAGE [REQUIRED]</label>
-        <textarea
-          {...form.register("message")}
-          rows={4}
-          className="w-full terminal-input px-3 py-2 text-sm resize-none"
-          placeholder="Enter your investment inquiry or message..."
-        />
-        {form.formState.errors.message && (
-          <div className="text-xs text-red-400 mt-1">ERROR: {form.formState.errors.message.message}</div>
-        )}
-      </div>
-
-      <div className="flex justify-between items-center">
-        <div className="text-xs opacity-60">
-          <div>ENCRYPTION: ENABLED</div>
-          <div>STATUS: READY_TO_TRANSMIT</div>
-        </div>
-        
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="terminal-amber border border-current px-6 py-2 text-sm hover:bg-amber-600 hover:text-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {isSubmitting ? "TRANSMITTING..." : "SEND_MESSAGE"}
-        </button>
-      </div>
-    </form>
-  );
-}
 
 export default function Home() {
   const portfolioCompanies = [
@@ -357,11 +228,7 @@ export default function Home() {
                   </a>
                 </div>
                 
-                <div className="mb-4">
-                  <div className="terminal-amber-light mb-2">HEADQUARTERS:</div>
-                  <div className="opacity-80">New York, NY</div>
-                  <div className="opacity-60 text-xs">United States</div>
-                </div>
+
                 
                 <div className="mb-4">
                   <div className="terminal-amber-light mb-2">RESPONSE TIME:</div>
@@ -371,13 +238,7 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Contact Form Section */}
-          <section className="terminal-border terminal-container p-6 slide-up">
-            <h2 className="text-xl mb-4 terminal-glow">5.0 MESSAGE_TRANSMISSION</h2>
-            <div className="text-sm mb-6 opacity-60">Secure communication protocol for investment inquiries</div>
-            
-            <ContactForm />
-          </section>
+
 
           {/* System Status Footer */}
           <section className="terminal-border terminal-container p-4 fade-in">
