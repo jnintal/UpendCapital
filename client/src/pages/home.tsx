@@ -79,7 +79,7 @@ export default function Home() {
               UPEND CAPITAL
             </h1>
             
-            <div className="flex justify-center items-center gap-2 text-sm typing-delay-3 fade-in">
+            <div className="flex justify-center items-center gap-2 text-sm">
               <span>STATUS:</span>
               <span className="terminal-lime">ONLINE</span>
               <span className="w-2 h-2 bg-current rounded-full terminal-cursor"></span>
