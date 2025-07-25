@@ -224,7 +224,10 @@ export default function Home() {
                   </a>
                 </div>
                 
-
+                <div className="mb-4">
+                  <div className="terminal-amber-light mb-2">LOCATION:</div>
+                  <div className="opacity-80">New York, NY</div>
+                </div>
                 
                 <div className="mb-4">
                   <div className="terminal-amber-light mb-2">RESPONSE TIME:</div>
