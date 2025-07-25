@@ -375,7 +375,8 @@
   }
 }
 
-/* Terminal font family */
+/* Modern terminal font family like Kaizen Automation */
 .font-terminal {
-  font-family: 'Courier New', Monaco, 'Lucida Console', monospace;
+  font-family: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Consolas', 'Courier New', monospace;
+  font-feature-settings: 'liga' 1, 'calt' 1;
 }
