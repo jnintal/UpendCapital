@@ -108,10 +108,6 @@ export default function Home() {
                   <div className="terminal-amber-light mb-2">SECTORS:</div>
                   <div className="opacity-80">Agnostic - All Technology Verticals</div>
                 </div>
-                <div className="mb-4">
-                  <div className="terminal-amber-light mb-2">LOCATION:</div>
-                  <div className="opacity-80">New York, NY</div>
-                </div>
               </div>
               <div>
                 <div className="mb-4">
