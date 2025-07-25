@@ -265,6 +265,26 @@
     background: linear-gradient(135deg, #333, #111);
   }
   
+  /* Terminal input styling */
+  .terminal-input {
+    background: var(--terminal-container);
+    border: 1px solid var(--terminal-amber-dim);
+    color: var(--terminal-amber);
+    font-family: inherit;
+    transition: all 0.2s ease;
+  }
+  
+  .terminal-input:focus {
+    border-color: var(--terminal-amber);
+    box-shadow: 0 0 8px rgba(255, 176, 0, 0.3);
+    outline: none;
+  }
+  
+  .terminal-input::placeholder {
+    color: var(--terminal-amber-dim);
+    opacity: 0.6;
+  }
+  
   .terminal-scan {
     position: relative;
     overflow: hidden;
