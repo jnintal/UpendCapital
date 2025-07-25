@@ -66,6 +66,16 @@ export default function Home() {
       name: "ZETA",
       description: "FINANCES FOR COUPLES AND FAMILIES",
       url: "https://www.askzeta.com/"
+    },
+    {
+      name: "STEALTH COMPANY [CLASSIFIED]",
+      description: "FINTECH",
+      url: null
+    },
+    {
+      name: "STEALTH COMPANY [CLASSIFIED]",
+      description: "AI VERTICAL SAAS",
+      url: null
     }
   ];
 
@@ -152,14 +162,20 @@ export default function Home() {
               {portfolioCompanies.map((company, index) => (
                 <div key={index} className="portfolio-card border border-current border-opacity-30 p-4">
                   <div className="mb-2">
-                    <a 
-                      href={company.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="portfolio-name terminal-amber-light terminal-link px-2 py-1 inline-block"
-                    >
-                      {company.name} →
-                    </a>
+                    {company.url ? (
+                      <a 
+                        href={company.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="portfolio-name terminal-amber-light terminal-link px-2 py-1 inline-block"
+                      >
+                        {company.name} →
+                      </a>
+                    ) : (
+                      <div className="portfolio-name terminal-amber-light px-2 py-1 inline-block opacity-80">
+                        {company.name}
+                      </div>
+                    )}
                   </div>
                   <div className="portfolio-description text-xs">{company.description}</div>
                 </div>
@@ -168,7 +184,7 @@ export default function Home() {
             
             <div className="mt-6 text-xs opacity-60">
               <div className="mb-2">PORTFOLIO_STATUS: ACTIVE_MONITORING</div>
-              <div>COMPANIES_TRACKED: 13</div>
+              <div>COMPANIES_TRACKED: 15</div>
             </div>
           </section>
 
