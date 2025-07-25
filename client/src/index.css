@@ -69,10 +69,46 @@
 @layer components {
   .terminal-bg {
     background-color: var(--terminal-bg);
+    position: relative;
+  }
+  
+  .terminal-bg::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    z-index: 1;
+    pointer-events: none;
+    background-image: 
+      radial-gradient(circle at 20% 80%, transparent 50%, rgba(120, 119, 198, 0.3) 100%),
+      radial-gradient(circle at 80% 20%, transparent 50%, rgba(255, 255, 255, 0.15) 100%),
+      radial-gradient(circle at 40% 40%, transparent 50%, rgba(120, 119, 198, 0.2) 100%),
+      repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 255, 0, 0.03) 2px, rgba(0, 255, 0, 0.03) 4px);
+    animation: terminal-noise 0.2s infinite linear;
+  }
+  
+  .terminal-bg::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(transparent 50%, rgba(0, 255, 0, 0.02) 50%);
+    background-size: 100% 4px;
+    animation: terminal-scanlines 0.1s linear infinite;
   }
   
   .terminal-container {
     background-color: var(--terminal-container);
+    position: relative;
+    z-index: 2;
   }
   
   .terminal-green {
@@ -286,6 +322,51 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes terminal-noise {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-1px, -1px);
+  }
+  20% {
+    transform: translate(1px, -2px);
+  }
+  30% {
+    transform: translate(-1px, 0px);
+  }
+  40% {
+    transform: translate(1px, 2px);
+  }
+  50% {
+    transform: translate(-1px, -1px);
+  }
+  60% {
+    transform: translate(-1px, 1px);
+  }
+  70% {
+    transform: translate(0px, 1px);
+  }
+  80% {
+    transform: translate(1px, -1px);
+  }
+  90% {
+    transform: translate(1px, 2px);
+  }
+  100% {
+    transform: translate(1px, -2px);
+  }
+}
+
+@keyframes terminal-scanlines {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(4px);
   }
 }
 
