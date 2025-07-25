@@ -251,7 +251,7 @@ export default function Home() {
                   <div>DISK SPACE: <span className="opacity-80">42MB FREE</span></div>
                 </div>
                 <div className="mt-2 md:mt-0 opacity-60 text-right">
-                  <div>UPEND CAPITAL INVESTMENT SYSTEM</div>
+                  <div>UPEND CAPITAL LLC</div>
                   <div>BUILD: 1985.07.24.001</div>
                   <div>TERMINAL EMULATION: AMBER CRT</div>
                 </div>
