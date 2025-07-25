@@ -69,11 +69,12 @@ export default function Home() {
 
   return (
     <div className="terminal-bg terminal-amber font-terminal min-h-screen p-4">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto terminal-screen-curve p-8 m-4">
         {/* Header Terminal */}
         <div className="terminal-border terminal-container p-6 mb-8 fade-in">
           <div className="text-center">
-            <div className="text-sm mb-4 opacity-60">Investment Terminal v1.0</div>
+            <div className="text-xs mb-2 opacity-40 font-mono">UPEND CAPITAL INVESTMENT SYSTEM v1.0</div>
+            <div className="text-xs mb-4 opacity-40">Copyright (C) 1985-2025 • All Rights Reserved</div>
             
             <h1 className="text-4xl md:text-6xl font-bold mb-4 terminal-glow tracking-wider">
               UPEND CAPITAL
@@ -241,14 +242,22 @@ export default function Home() {
 
           {/* System Status Footer */}
           <section className="terminal-border terminal-container p-4 fade-in">
-            <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-              <div className="flex items-center gap-4 mb-4 md:mb-0">
-                <div>SYSTEM: <span className="terminal-amber-light">OPERATIONAL</span></div>
-                <div>NETWORK: <span className="terminal-amber-light">ONLINE</span></div>
-                <div>LAST_UPDATE: <span className="opacity-60">2025.07.24</span></div>
+            <div className="text-xs space-y-2">
+              <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+                <div className="space-y-1">
+                  <div>SYSTEM STATUS: <span className="terminal-amber-light">OPERATIONAL</span></div>
+                  <div>NETWORK CONNECTION: <span className="terminal-amber-light">ESTABLISHED</span></div>
+                  <div>MEMORY: <span className="opacity-80">640K AVAILABLE</span></div>
+                  <div>DISK SPACE: <span className="opacity-80">42MB FREE</span></div>
+                </div>
+                <div className="mt-2 md:mt-0 opacity-60 text-right">
+                  <div>UPEND CAPITAL INVESTMENT SYSTEM</div>
+                  <div>BUILD: 1985.07.24.001</div>
+                  <div>TERMINAL EMULATION: AMBER CRT</div>
+                </div>
               </div>
-              <div className="opacity-60">
-                UPEND_CAPITAL_LLC © 2025 • TERMINAL_v1.0
+              <div className="border-t border-amber-800 pt-2 mt-4 text-center opacity-40">
+                Press [F1] for Help • [ESC] to Exit • [CTRL+C] to Interrupt
               </div>
             </div>
           </section>

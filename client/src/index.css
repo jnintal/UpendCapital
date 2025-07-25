@@ -98,18 +98,37 @@
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.1;
+    opacity: 0.08;
     z-index: 1;
     pointer-events: none;
-    background: linear-gradient(transparent 50%, rgba(255, 176, 0, 0.02) 50%);
-    background-size: 100% 4px;
-    animation: terminal-scanlines 0.1s linear infinite;
+    background: 
+      linear-gradient(transparent 50%, rgba(255, 176, 0, 0.02) 50%),
+      radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.2) 100%);
+    background-size: 100% 3px, 100% 100%;
+    animation: terminal-scanlines 0.15s linear infinite;
   }
   
   .terminal-container {
     background-color: var(--terminal-container);
     position: relative;
     z-index: 2;
+    border-radius: 0;
+    backdrop-filter: brightness(1.1);
+  }
+  
+  .terminal-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+      rgba(255, 176, 0, 0.05) 0%, 
+      transparent 50%, 
+      rgba(255, 176, 0, 0.02) 100%);
+    pointer-events: none;
+    z-index: -1;
   }
   
   .terminal-amber {
@@ -219,6 +238,32 @@
   
   .loading-dots:nth-child(1) { animation-delay: -0.32s; }
   .loading-dots:nth-child(2) { animation-delay: -0.16s; }
+  
+  /* 1980s DOS-style loading bar */
+  .retro-loading-bar {
+    background: var(--terminal-container);
+    border: 1px solid var(--terminal-amber-dim);
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .retro-loading-bar::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--terminal-amber);
+    animation: retro-loading 2s ease-in-out infinite;
+  }
+  
+  /* 1980s bezel styling for containers */
+  .retro-bezel {
+    border: 3px solid;
+    border-color: #666 #222 #222 #666;
+    background: linear-gradient(135deg, #333, #111);
+  }
   
   .terminal-scan {
     position: relative;
@@ -371,7 +416,45 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(4px);
+    transform: translateY(3px);
+  }
+}
+
+@keyframes phosphor-persist {
+  0% {
+    text-shadow: 
+      0 0 5px var(--terminal-amber),
+      0 0 10px var(--terminal-amber),
+      0 0 20px var(--terminal-amber);
+  }
+  100% {
+    text-shadow: 0 0 5px var(--terminal-amber);
+  }
+}
+
+@keyframes terminal-cursor-persist {
+  0%, 50% { 
+    opacity: 1; 
+    box-shadow: 0 0 8px var(--terminal-amber);
+  }
+  51%, 100% { 
+    opacity: 0.3; 
+    box-shadow: none;
+  }
+}
+
+@keyframes retro-loading {
+  0% { 
+    width: 0%; 
+    opacity: 1;
+  }
+  50% { 
+    width: 100%; 
+    opacity: 0.8;
+  }
+  100% { 
+    width: 0%; 
+    opacity: 1;
   }
 }
 
@@ -379,4 +462,39 @@
 .font-terminal {
   font-family: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Consolas', 'Courier New', monospace;
   font-feature-settings: 'liga' 1, 'calt' 1;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+}
+
+/* 1980s CRT Screen curvature effect */
+.terminal-screen-curve {
+  border-radius: 15px;
+  box-shadow: 
+    inset 0 0 50px rgba(255, 176, 0, 0.1),
+    0 0 20px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(255, 176, 0, 0.05);
+  background: radial-gradient(ellipse at center, 
+    var(--terminal-bg) 60%, 
+    #000000 100%);
+}
+
+/* Phosphor persistence effect */
+.terminal-glow-persist {
+  animation: phosphor-persist 0.2s ease-out;
+}
+
+/* Terminal typing sound effect simulation */
+.terminal-type-effect {
+  position: relative;
+}
+
+.terminal-type-effect::after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--terminal-amber);
+  animation: terminal-cursor-persist 0.8s infinite;
 }
