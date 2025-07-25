@@ -68,7 +68,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="terminal-bg terminal-green font-terminal min-h-screen p-4">
+    <div className="terminal-bg terminal-amber font-terminal min-h-screen p-4">
       <div className="max-w-6xl mx-auto">
         {/* Header Terminal */}
         <div className="terminal-border terminal-container p-6 mb-8 fade-in">
@@ -81,7 +81,7 @@ export default function Home() {
             
             <div className="flex justify-center items-center gap-2 text-sm">
               <span>STATUS:</span>
-              <span className="terminal-lime">ONLINE</span>
+              <span className="terminal-amber-light">ONLINE</span>
               <span className="w-2 h-2 bg-current rounded-full terminal-cursor"></span>
             </div>
           </div>
@@ -94,31 +94,31 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-6 text-sm">
               <div>
                 <div className="mb-4">
-                  <div className="terminal-lime mb-2">INVESTMENT RANGE:</div>
+                  <div className="terminal-amber-light mb-2">INVESTMENT RANGE:</div>
                   <div className="opacity-80">$5,000 - $50,000</div>
                 </div>
                 <div className="mb-4">
-                  <div className="terminal-lime mb-2">STAGE FOCUS:</div>
+                  <div className="terminal-amber-light mb-2">STAGE FOCUS:</div>
                   <div className="opacity-80">Pre-seed to Series A</div>
                 </div>
                 <div className="mb-4">
-                  <div className="terminal-lime mb-2">SECTORS:</div>
+                  <div className="terminal-amber-light mb-2">SECTORS:</div>
                   <div className="opacity-80">Agnostic - All Technology Verticals</div>
                 </div>
                 <div className="mb-4">
-                  <div className="terminal-lime mb-2">LOCATION:</div>
+                  <div className="terminal-amber-light mb-2">LOCATION:</div>
                   <div className="opacity-80">New York, NY</div>
                 </div>
               </div>
               <div>
                 <div className="mb-4">
-                  <div className="terminal-lime mb-2">FUND PRINCIPALS:</div>
+                  <div className="terminal-amber-light mb-2">FUND PRINCIPALS:</div>
                   <div className="opacity-80 mb-2">• 
                     <a 
                       href="https://www.linkedin.com/in/jintal/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="terminal-green terminal-link px-1"
+                      className="terminal-amber terminal-link px-1"
                     >
                       Justin
                     </a>
@@ -128,14 +128,14 @@ export default function Home() {
                       href="https://www.linkedin.com/in/alex-z-chen/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="terminal-green terminal-link px-1"
+                      className="terminal-amber terminal-link px-1"
                     >
                       Alex
                     </a>
                   </div>
                 </div>
                 <div className="mb-4">
-                  <div className="terminal-lime mb-2">TEAM BACKGROUND:</div>
+                  <div className="terminal-amber-light mb-2">TEAM BACKGROUND:</div>
                   <div className="opacity-80 text-xs">
                     Justin is the founder and ex-CEO of Forage (YCS21). Alex was an investor at Citi Ventures and Kapor Capital. We invest in markets and people.
                   </div>
@@ -157,7 +157,7 @@ export default function Home() {
                       href={company.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="portfolio-name terminal-lime terminal-link px-2 py-1 inline-block"
+                      className="portfolio-name terminal-amber-light terminal-link px-2 py-1 inline-block"
                     >
                       {company.name} →
                     </a>
@@ -180,7 +180,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <div className="mb-6">
-                  <div className="terminal-lime mb-3">TARGET MARKETS</div>
+                  <div className="terminal-amber-light mb-3">TARGET MARKETS</div>
                   <div className="text-sm space-y-2 opacity-80">
                     <div>• Large fragmented industries</div>
                     <div>• Low customer satisfaction scores</div>
@@ -191,7 +191,7 @@ export default function Home() {
               
               <div>
                 <div className="mb-6">
-                  <div className="terminal-lime mb-3">INVESTMENT APPROACH</div>
+                  <div className="terminal-amber-light mb-3">INVESTMENT APPROACH</div>
                   <div className="text-sm space-y-2 opacity-80">
                     <div>• High-conviction, concentrated bets</div>
                     <div>• Hands-on support and mentorship</div>
@@ -209,30 +209,30 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <div className="mb-4">
-                  <div className="terminal-lime mb-2">PRIMARY CONTACT:</div>
+                  <div className="terminal-amber-light mb-2">PRIMARY CONTACT:</div>
                   <a 
                     href="mailto:justin@upendcapital.com"
-                    className="terminal-green terminal-link px-2 py-1 inline-block mb-1"
+                    className="terminal-amber terminal-link px-2 py-1 inline-block mb-1"
                   >
                     justin@upendcapital.com
                   </a>
                   <br />
                   <a 
                     href="mailto:alex@upendcapital.com"
-                    className="terminal-green terminal-link px-2 py-1 inline-block"
+                    className="terminal-amber terminal-link px-2 py-1 inline-block"
                   >
                     alex@upendcapital.com
                   </a>
                 </div>
                 
                 <div className="mb-4">
-                  <div className="terminal-lime mb-2">HEADQUARTERS:</div>
+                  <div className="terminal-amber-light mb-2">HEADQUARTERS:</div>
                   <div className="opacity-80">New York, NY</div>
                   <div className="opacity-60 text-xs">United States</div>
                 </div>
                 
                 <div className="mb-4">
-                  <div className="terminal-lime mb-2">RESPONSE TIME:</div>
+                  <div className="terminal-amber-light mb-2">RESPONSE TIME:</div>
                   <div className="opacity-80">24-48 hours</div>
                 </div>
               </div>
@@ -243,8 +243,8 @@ export default function Home() {
           <section className="terminal-border terminal-container p-4 fade-in">
             <div className="flex flex-col md:flex-row justify-between items-center text-sm">
               <div className="flex items-center gap-4 mb-4 md:mb-0">
-                <div>SYSTEM: <span className="terminal-lime">OPERATIONAL</span></div>
-                <div>NETWORK: <span className="terminal-lime">ONLINE</span></div>
+                <div>SYSTEM: <span className="terminal-amber-light">OPERATIONAL</span></div>
+                <div>NETWORK: <span className="terminal-amber-light">ONLINE</span></div>
                 <div>LAST_UPDATE: <span className="opacity-60">2025.07.24</span></div>
               </div>
               <div className="opacity-60">

@@ -24,12 +24,13 @@
   --ring: hsl(20, 14.3%, 4.1%);
   --radius: 0.5rem;
 
-  /* Terminal Colors */
-  --terminal-green: hsl(120, 100%, 50%);
-  --terminal-lime: hsl(90, 61%, 55%);
-  --terminal-bg: hsl(0, 0%, 10%);
-  --terminal-container: hsl(0, 0%, 5%);
-  --terminal-border: hsl(120, 100%, 50%);
+  /* Terminal Colors - Authentic 1980s Amber P3 Phosphor */
+  --terminal-amber: #FFB000;
+  --terminal-amber-light: #FFCC00;
+  --terminal-amber-dim: #CC8800;
+  --terminal-bg: #0D0A00;
+  --terminal-container: #1A1100;
+  --terminal-border: #FFB000;
 }
 
 .dark {
@@ -86,7 +87,7 @@
       radial-gradient(circle at 20% 80%, transparent 50%, rgba(120, 119, 198, 0.3) 100%),
       radial-gradient(circle at 80% 20%, transparent 50%, rgba(255, 255, 255, 0.15) 100%),
       radial-gradient(circle at 40% 40%, transparent 50%, rgba(120, 119, 198, 0.2) 100%),
-      repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 255, 0, 0.03) 2px, rgba(0, 255, 0, 0.03) 4px);
+      repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 176, 0, 0.03) 2px, rgba(255, 176, 0, 0.03) 4px);
     animation: terminal-noise 0.2s infinite linear;
   }
   
@@ -100,7 +101,7 @@
     opacity: 0.1;
     z-index: 1;
     pointer-events: none;
-    background: linear-gradient(transparent 50%, rgba(0, 255, 0, 0.02) 50%);
+    background: linear-gradient(transparent 50%, rgba(255, 176, 0, 0.02) 50%);
     background-size: 100% 4px;
     animation: terminal-scanlines 0.1s linear infinite;
   }
@@ -111,12 +112,16 @@
     z-index: 2;
   }
   
-  .terminal-green {
-    color: var(--terminal-green);
+  .terminal-amber {
+    color: var(--terminal-amber);
   }
   
-  .terminal-lime {
-    color: var(--terminal-lime);
+  .terminal-amber-light {
+    color: var(--terminal-amber-light);
+  }
+  
+  .terminal-amber-dim {
+    color: var(--terminal-amber-dim);
   }
   
   .terminal-border {
@@ -125,11 +130,11 @@
   }
   
   .terminal-glow {
-    text-shadow: 0 0 5px var(--terminal-green);
+    text-shadow: 0 0 5px var(--terminal-amber);
   }
   
   .terminal-glow-intense {
-    text-shadow: 0 0 10px var(--terminal-green), 0 0 20px var(--terminal-green), 0 0 30px var(--terminal-green);
+    text-shadow: 0 0 10px var(--terminal-amber), 0 0 20px var(--terminal-amber), 0 0 30px var(--terminal-amber);
   }
   
   .terminal-link {
@@ -137,7 +142,7 @@
   }
   
   .terminal-link:hover {
-    background-color: var(--terminal-green);
+    background-color: var(--terminal-amber);
     color: var(--terminal-bg);
     text-shadow: none;
   }
@@ -148,13 +153,13 @@
   }
   
   .portfolio-card:hover {
-    border-color: var(--terminal-green);
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    border-color: var(--terminal-amber);
+    box-shadow: 0 0 15px rgba(255, 176, 0, 0.3);
     transform: translateY(-2px);
   }
   
   .portfolio-card:hover .portfolio-name {
-    text-shadow: 0 0 8px var(--terminal-green);
+    text-shadow: 0 0 8px var(--terminal-amber);
   }
   
   .portfolio-card:hover .portfolio-description {
@@ -247,10 +252,10 @@
 
 @keyframes terminal-glow {
   from { 
-    text-shadow: 0 0 5px var(--terminal-green), 0 0 10px var(--terminal-green); 
+    text-shadow: 0 0 5px var(--terminal-amber), 0 0 10px var(--terminal-amber); 
   }
   to { 
-    text-shadow: 0 0 10px var(--terminal-green), 0 0 20px var(--terminal-green), 0 0 30px var(--terminal-green); 
+    text-shadow: 0 0 10px var(--terminal-amber), 0 0 20px var(--terminal-amber), 0 0 30px var(--terminal-amber); 
   }
 }
 
@@ -281,7 +286,7 @@
     border-right-color: transparent; 
   }
   50% { 
-    border-right-color: var(--terminal-green); 
+    border-right-color: var(--terminal-amber); 
   }
 }
 
